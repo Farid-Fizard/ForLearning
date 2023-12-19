@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms REST</title>
+  <style>
+    table,tr,th,td{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Room Table</h1>
+  <p><a href="add">Add new room</a></p>
+  <table id="rooms_table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Capacity</th>
+    <th>Projector</th>
+    <th>Whiteboard</th>
+    <th>Action</th>
+  </tr>
+</table>
+
+  <div id="roomDetail" style="display: none">
+    ID: <span id="roomId"> </span></br>
+    Name: <span id="roomName"> </span></br>
+    Capacity: <span id="roomCapacity"> </span></br>
+    Projector: <span id="roomProjector"> </span></br>
+    Whiteboard: <span id="roomWhiteboard"> </span></br>
+  </div>
+
+
+  <div id="editRoomDetail" style="display: none">
+    ID: <span id="editRoomId"> </span></br>
+    Name: <input type="text" id="editRoomName"> </input></br>
+    Capacity: <input type="number" id="editRoomCapacity"> </input></br>
+    Projector: <input type="checkbox"  id="editRoomProjector" value="0">Yes</br>
+    Whiteboard: <input type="checkbox"  id="editRoomWhiteboard" value="0">Yes </br>
+    <button id="updateRoom" onclick="savingUpdates()">Update</button>
+  </div>
+
+<script src="roombook-xhr.js"></script>
+</body>
+</html>
